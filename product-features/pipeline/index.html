@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Pipeline - CloudIaC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CloudIaC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品介绍 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../product-description/product-description/" class="dropdown-item">产品简介</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-advantage/" class="dropdown-item">核心优势</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-glossary/" class="dropdown-item">术语解释</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-architecture/" class="dropdown-item">产品构架</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../quick-start/create-org-project/" class="dropdown-item">创建组织和项目</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/integrated-vcs/" class="dropdown-item">集成vcs</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/create-template/" class="dropdown-item">创建云模板</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/deploy-env/" class="dropdown-item">部署环境</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品功能 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../organizations/" class="dropdown-item">组织管理</a>
+</li>
+                                    
+<li>
+    <a href="../projects/" class="dropdown-item">项目管理</a>
+</li>
+                                    
+<li>
+    <a href="../variables/" class="dropdown-item">变量管理</a>
+</li>
+                                    
+<li>
+    <a href="../templates/" class="dropdown-item">云模板管理</a>
+</li>
+                                    
+<li>
+    <a href="../envs/" class="dropdown-item">环境管理</a>
+</li>
+                                    
+<li>
+    <a href="../compliance/" class="dropdown-item">安全合规</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Pipeline</a>
+</li>
+                                    
+<li>
+    <a href="../drift-scan/" class="dropdown-item">漂移检测</a>
+</li>
+                                    
+<li>
+    <a href="../resource-account/" class="dropdown-item">资源帐号</a>
+</li>
+                                    
+<li>
+    <a href="../vcs/" class="dropdown-item">VCS管理</a>
+</li>
+                                    
+<li>
+    <a href="../keys/" class="dropdown-item">密钥管理</a>
+</li>
+                                    
+<li>
+    <a href="../notice/" class="dropdown-item">事件通知</a>
+</li>
+                                    
+<li>
+    <a href="../user-role/" class="dropdown-item">用户角色</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品部署 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../product-deploy/container/" class="dropdown-item">容器化部署</a>
+</li>
+                                    
+<li>
+    <a href="../../product-deploy/host/" class="dropdown-item">手动部署</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">常见问题 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../answer-questions/" class="dropdown-item">常见问题</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API文档 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../api-docs/" class="dropdown-item">简介</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../releases/" class="nav-link">Releases</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../compliance/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../drift-scan/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#pipeline" class="nav-link">Pipeline</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#pipeline_1" class="nav-link">如何使用 Pipeline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pipeline_2" class="nav-link">Pipeline 标准流程模板</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pipeline_3" class="nav-link">Pipeline 的任务类型和步骤</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#command" class="nav-link">Command 步骤类型</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pipeline_4" class="nav-link">Pipeline 回调</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pipeline_5" class="nav-link">完整的自定义 Pipeline 示例</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="pipeline">Pipeline</h1>
+<p>CloudIaC 支持 Pipeline，将环境的 Plan、部署、销毁任务拆分为多个步骤，默认的我们为所有任务类型定义了标准步骤流程，用户可以自定义 pipeline，来增加步骤、调整步骤执行顺序等。</p>
+<p>同时在前端，任务也是分步骤展示： <img alt="img" src="https://cloudiac.readthedocs.io/zh/latest/resources/pipeline-steps-1.png" /></p>
+<h2 id="pipeline_1">如何使用 Pipeline</h2>
+<p>自定义 Pipeline 通过在云模板代码库中增加 pipeline 文件实现，文件名为 <code>.cloudiac-pipeline.yml</code>。</p>
+<p>文件查找逻辑如下:</p>
+<ol>
+<li>如果云模板设置了工作目录，则在工作目录下查找 <code>.cloudiac-pipeline.yml</code>，存在则使用</li>
+<li>如果工作目录不存在则在代码库根目录下查找 <code>.cloudiac-pipeline.yml</code>，存在则使用</li>
+<li>否则使用默认的 pipeline 标准流程模板</li>
+</ol>
+<h2 id="pipeline_2">Pipeline 标准流程模板</h2>
+<p>Pipeline 使用 yaml 格式定义，标准的流程模板如下:</p>
+<pre><code class="language-yaml">version: 0.3    # pipeline 格式版本号，为了保证多版本的兼容性
+
+# plan 任务
+plan:
+  steps:    # 任务的步骤
+    - type: checkout    # 步骤类型
+      name: Checkout Code   # 步骤的展示名称，未提供名称则展示为步骤类型
+
+    - type: terraformInit
+      name: Terraform Init
+
+    - type: opaScan
+      name: OPA Scan
+
+    - type: terraformPlan
+      name: Terraform Plan
+
+apply:
+  steps:
+    - type: checkout
+      name: Checkout Code
+
+    - type: terraformInit
+      name: Terraform Init
+
+    - type: opaScan
+      name: OPA Scan
+
+    - type: terraformPlan
+      name: Terraform Plan
+
+    - type: terraformApply
+      name: Terraform Apply
+
+    - type: ansiblePlay
+      name: Run playbook
+
+destroy:
+  steps:
+    - type: checkout
+      name: Checkout Code
+
+    - type: terraformInit
+      name: Terraform Init
+
+    - type: terraformPlan
+      name: Terraform Plan
+      args: 
+        - &quot;-destroy&quot;
+
+    - type: terraformDestroy
+      name: Terraform Destroy
+</code></pre>
+<h2 id="pipeline_3">Pipeline 的任务类型和步骤</h2>
+<p>从标准 pipeline 模板中可以看到，CloudIaC 支持对 plan、apply、destroy 三种任务进行自定义，分别对应环境的 Plan、部署任务、销毁任务。</p>
+<p>自定义 pipeline 时可以只对指定的任务类型做定义，未定义的任务类型会使用标准 pipeline 流程步骤。</p>
+<p>每一个任务类型都可以定义各自的步骤列表，CloudIaC 支持的步骤列表如下:</p>
+<table>
+<thead>
+<tr>
+<th>步骤类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checkout</td>
+<td>代码检出</td>
+</tr>
+<tr>
+<td>terraformInit</td>
+<td>terraform init</td>
+</tr>
+<tr>
+<td>terraformPlan</td>
+<td>terraform plan</td>
+</tr>
+<tr>
+<td>terraformApply</td>
+<td>terraform apply</td>
+</tr>
+<tr>
+<td>terraformDestroy</td>
+<td>terraform destroy</td>
+</tr>
+<tr>
+<td>ansiblePlay</td>
+<td>ansible-playbook</td>
+</tr>
+<tr>
+<td>opaScan</td>
+<td>OPA 策略扫描</td>
+</tr>
+<tr>
+<td>regoParse</td>
+<td>解析资源属性为 rego input</td>
+</tr>
+<tr>
+<td>command</td>
+<td>执行自定义命令</td>
+</tr>
+</tbody>
+</table>
+<p>同时步骤还支持 args 参数，terraform 和 ansible 相关步骤类型的 args 会以命令行参数的形式传递给执行的命令，如 terraformPlan 步骤传入 "-destroy" 参数用于生成 terraform destroy，command 步骤的 args 参数表示需要执行的 shell 命令。</p>
+<h2 id="command">Command 步骤类型</h2>
+<p>command 步骤允许您执行任意 shell 命令，基于 command 命令您可以实现功能强大的自定义流程。</p>
+<p>一些 command 命令使用场景示例:</p>
+<pre><code class="language-yaml">apply:
+  steps:
+    - name: Instal amazon.aws
+      type: command
+      args: 
+        - yum install -y python2-pip
+        - pip install botocore==1.21.41 boto3==1.18.41
+        - ansible-galaxy collection install amazon.aws
+
+    - name: Download alicloud provider
+      type: command
+      args: 
+        - &quot;curl -Ls https://github.com/aliyun/terraform-provider-alicloud/releases/download/v1.126.0/terraform-provider-alicloud_1.126.0_linux_amd64.zip &gt;/usr/share/terraform/plugins/registry.terraform.io/aliyun/alicloud/terraform-provider-alicloud_1.126.0_linux_amd64.zip&quot;
+
+    - name: Trigger workflow
+      type: command
+      args: 
+        - &quot;curl -d token=${WORKFLOW_TOKEN} https://workflow.example.com/step/${WORKFLOW_STEPID}/start&quot;
+</code></pre>
+<ul>
+<li>为避免与 yaml 格式特殊字符冲突，args 参数建议使用双引号包含</li>
+<li>CloudIaC 的任务步骤都是在容器中执行，不会影响宿主系统</li>
+</ul>
+<h2 id="pipeline_4">Pipeline 回调</h2>
+<p>除了给任务定义步骤之后 CloudIaC 还支持定义回调步骤，回调步骤基于任务的运行状态选择性执行。目前支持的回调类型有 <code>onSuccces</code> 和 <code>onFail</code>，onSuccess 步骤在任务所有步骤执行成功时回调，onFail 步骤在任务任意步骤执行失败时回调。</p>
+<p>回调使用示例:</p>
+<pre><code class="language-yaml">apply:
+  onSuccess:
+    name: 任务成功
+    type: command
+    args: 
+      - echo &quot;Task successful&quot;
+      - test &quot;$CLOUDIAC_ENV_STATUS&quot; = &quot;inactive&quot; &amp;&amp; echo &quot;Environment created&quot;
+      - test &quot;$CLOUDIAC_ENV_STATUS&quot; = &quot;failed&quot; &amp;&amp; echo &quot;Environment recovered&quot;
+
+  onFail:
+    name: 任务失败
+    type: command
+    args: 
+      - echo &quot;Task failed&quot;
+
+  steps: [] # 流程步骤省略
+</code></pre>
+<p>在 command 步骤中可以引用环境变量的值，通过判断变量值来执行不同的操作。如示例中基于环境在任务启动时的状态来判断是创建环境还是恢复失败状态的环境。</p>
+<p>CLOUDIAC_ENV_STATUS 为任务启动时平台自动导出的环境变量，完整的导出环境变量列表见文档: <a href="https://cloudiac.readthedocs.io/zh/latest/intra/variable/">变量</a></p>
+<p>回调步骤总是在流程的最后展示，流程步骤展示效果: <img alt="img" src="https://cloudiac.readthedocs.io/zh/latest/resources/pipeline-steps-2.png" /></p>
+<h2 id="pipeline_5">完整的自定义 Pipeline 示例</h2>
+<p>一个完整的自定义 pipeline 示例：</p>
+<pre><code class="language-yaml">--- 
+version: 0.3
+
+plan:
+  steps: 
+    - type: checkout
+      name: &quot;Checkout code&quot;
+
+    - type: terraformInit
+      name: &quot;Terraform Init&quot;
+
+    - type: opaScan
+      name: OPA Scan
+
+    - type: terraformPlan
+      name: &quot;Terraform Plan&quot;
+
+
+apply: 
+  onFail: 
+    type: command
+    args: 
+      - echo &quot;Job failed&quot;
+
+  onSuccess: 
+    type: command
+    args: 
+      - echo &quot;Job successful&quot;
+
+  steps: 
+    - type: command
+      args: 
+        - &quot;echo \&quot;get somethings\&quot;&quot;
+        - &quot;bash script.sh&quot;
+        - &quot;curl 127.0.0.1/api/action&quot;
+
+    - type: checkout
+      name: &quot;Checkout code&quot;
+
+    - type: terraformInit
+      name: &quot;Terraform Init&quot;
+
+    - type: opaScan
+      name: OPA Scan
+
+    - type: terraformPlan
+      name: &quot;Terraform Plan&quot;
+
+    - type: terraformApply
+      name: &quot;Terraform Apply&quot;
+
+    - type: ansiblePlay
+      name: &quot;Run playbook&quot;
+
+
+
+destroy: 
+  steps: 
+    - type: checkout
+      name: &quot;Checkout code&quot;
+
+    - type: terraformInit
+      name: &quot;Terraform Init&quot;
+
+    - type: terraformPlan
+      name: &quot;Terraform Plan&quot;
+      args: 
+        - &quot;-destroy&quot;
+
+    - type: terraformDestroy
+      name: &quot;Terraform Destroy&quot;
+
+    - type: command
+      name: &quot;Say Bye&quot;
+      args: 
+        - echo &quot;Bye!&quot;
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>环境管理 - CloudIaC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CloudIaC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品介绍 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../product-description/product-description/" class="dropdown-item">产品简介</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-advantage/" class="dropdown-item">核心优势</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-glossary/" class="dropdown-item">术语解释</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-architecture/" class="dropdown-item">产品构架</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../quick-start/create-org-project/" class="dropdown-item">创建组织和项目</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/integrated-vcs/" class="dropdown-item">集成vcs</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/create-template/" class="dropdown-item">创建云模板</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/deploy-env/" class="dropdown-item">部署环境</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品功能 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../organizations/" class="dropdown-item">组织管理</a>
+</li>
+                                    
+<li>
+    <a href="../projects/" class="dropdown-item">项目管理</a>
+</li>
+                                    
+<li>
+    <a href="../variables/" class="dropdown-item">变量管理</a>
+</li>
+                                    
+<li>
+    <a href="../templates/" class="dropdown-item">云模板管理</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">环境管理</a>
+</li>
+                                    
+<li>
+    <a href="../compliance/" class="dropdown-item">安全合规</a>
+</li>
+                                    
+<li>
+    <a href="../pipeline/" class="dropdown-item">Pipeline</a>
+</li>
+                                    
+<li>
+    <a href="../drift-scan/" class="dropdown-item">漂移检测</a>
+</li>
+                                    
+<li>
+    <a href="../resource-account/" class="dropdown-item">资源帐号</a>
+</li>
+                                    
+<li>
+    <a href="../vcs/" class="dropdown-item">VCS管理</a>
+</li>
+                                    
+<li>
+    <a href="../keys/" class="dropdown-item">密钥管理</a>
+</li>
+                                    
+<li>
+    <a href="../notice/" class="dropdown-item">事件通知</a>
+</li>
+                                    
+<li>
+    <a href="../user-role/" class="dropdown-item">用户角色</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品部署 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../product-deploy/container/" class="dropdown-item">容器化部署</a>
+</li>
+                                    
+<li>
+    <a href="../../product-deploy/host/" class="dropdown-item">手动部署</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">常见问题 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../answer-questions/" class="dropdown-item">常见问题</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API文档 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../api-docs/" class="dropdown-item">简介</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../releases/" class="nav-link">Releases</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../templates/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../compliance/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">环境管理</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">什么是环境</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">查看环境详细信息</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">环境状态</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">环境资源</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">存活时间</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">创建环境</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">销毁资源</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">重新部署环境</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">自动重试</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">审批流程</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">归档环境</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">环境管理</h1>
+<h2 id="_2">什么是环境</h2>
+<p>环境是由 CloudIaC 管理的部署实例，是CloudIaC管理资源的核心；</p>
+<p>用户通过在组织下创建云模板，并运行云模板进行部署来创建新的环境，同时在项目下对环境进行管理；</p>
+<p>用户可以创建、重新部署环境，并可对环境下的资源进行销毁；</p>
+<p>CloudIaC 通过 Terraform 的状态文件来维护整个环境的状态，用户可以通过修改变量或修改资源描述配置文件来进行重新部署，新的部署会在上一次的状态下进行，通过这种机制，用户可以更加方便的实现对环境资源的扩缩容等操作；同时对于环境下资源的销毁，基于状态也可以快速的实现一键完全的清理。</p>
+<h2 id="_3">查看环境详细信息</h2>
+<p>您可以通过『项目』-『环境』菜单查看您的环境，该页面将列出该项目下所有的环境列表；</p>
+<p>对于每个环境，您可以看到它是由哪个云模板创建、创建人、当前状态、环境下创建的资源数量以及剩余的生存时间；</p>
+<p>点击环境，展开查看环境详情，在环境详情页面中，您可以执行『重新部署』、『销毁资源』等操作，还可以查看最新部署的日志、Terraform输出、部署中使用的变量以及部署历史记录。</p>
+<h2 id="_4">环境状态</h2>
+<p>环境的状态包括以下几种：</p>
+<ul>
+<li><em>活跃</em>：成功部署并启动运行</li>
+<li><em>不活跃</em>：资源已销毁</li>
+<li><em>执行中</em>：正在部署或者销毁过程中</li>
+<li><em>失败</em>：在部署过程中发生错误</li>
+<li><em>待审批</em>：operator发起部署作业后等待Manager或Approver审批</li>
+</ul>
+<p><img alt="img" src="../../images/environment-status.jpg" /></p>
+<h2 id="_5">环境资源</h2>
+<p>当您的环境处于<em>活跃</em>状态时，您只需单击环境即可查看其中包含的资源。</p>
+<p><img alt="image-20211223154720024" src="../../images/WX20211223-174758%402x.png" /></p>
+<h2 id="_6">存活时间</h2>
+<p><em>存活时间</em>是 CloudIaC 从设置完存活时间的时间点到自动销毁环境下资源的时间长度(若是初始创建的环境则会在资源第一次创建成功后开始计算自动销毁时间)；</p>
+<p>可以在创建或重新部署环境时设置存活时间，预选值有：<em>不限</em>、<em>12小时</em>、<em>1天</em>、 <em>3天</em>、<em>1周</em>、<em>半个月</em>、<em>1个月</em>和<em>指定时间</em>，选择『指定时间』时可以直接设置一个具体截止时间；</p>
+<p>一个<em>不限</em>存活时间的环境将永远不会被自动销毁，通常生产环境等静态环境会设置为不限时间，开发、测试环境则可以根据需要设置合适的存活时间；</p>
+<h2 id="_7">创建环境</h2>
+<p>请参考<a href="../../quick-start/deploy-env/">部署环境</a></p>
+<h2 id="_8">销毁资源</h2>
+<p>有两种方式对环境下的资源进行销毁；</p>
+<p>一种是设置了『存活时间』的环境，在达到时间限制时会自动销毁；</p>
+<p>另一种是手动销毁，在『环境详情』页面点击右上角的『销毁资源』来进行销毁操作；</p>
+<p>当<em>活跃</em>环境下的资源被销毁成功，环境状态将设置为<em>不活跃</em>，如果销毁资源失败，环境状态将设置为<em>失败</em>。</p>
+<h2 id="_9">重新部署环境</h2>
+<p>对于已经创建出来的环境，您可以重新部署，在环境详情页面，点击右上角的『重新部署』来进行；</p>
+<p>如果您的环境当前正在运行部署或销毁任务则无法发起新的部署，您需要等待前一次部署结束才能发起新的任务；</p>
+<p>当您重新部署『不活跃』环境时，在部署成功后，环境状态将自动转为『活跃』；</p>
+<p>重新部署时，除非手动重新设置存活时间，否则默认使用环境原有的存活时间。</p>
+<h2 id="_10">自动重试</h2>
+<p>在执行环境部署操作时，您可能希望CloudIaC在出现错误时自动重试；</p>
+<p>针对每个云模板您可以启用自动重试，并可以配置重试间隔和次数；</p>
+<p>CloudIaC 的每一次部署会有多个步骤，重试只会重新执行当前步骤，快成功执行的步骤不会重复执行。</p>
+<h2 id="_11">审批流程</h2>
+<p>对于在环境中执行的每个创建、销毁或重新部署作业， CloudIaC 首先创建一个<em>Terraform Plan</em>，然后会进入『待审批』状态，需要由项目的Manager或Approver角色用户来进行批准才能继续执行部署；</p>
+<p>Manager或Approver角色的用户可以在创建环境时选中『自动通过审批』来在后续的部署操作中自动批准而无需等待；</p>
+<p>如果用户没有设置自动批准，CloudIaC 将在<em>Terraform plan</em>创建后进入等待，直到Manager或Approver主动批准执行计划。</p>
+<h2 id="_12">归档环境</h2>
+<p>为了帮助用户管理环境，ClouidIaC 可以让用户归档不再使用（不活跃状态）的环境，归档后的环境将不再可用。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

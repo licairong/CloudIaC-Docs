@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>容器化部署 - CloudIaC</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CloudIaC</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品介绍 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../product-description/product-description/" class="dropdown-item">产品简介</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-advantage/" class="dropdown-item">核心优势</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-glossary/" class="dropdown-item">术语解释</a>
+</li>
+                                    
+<li>
+    <a href="../../product-description/product-architecture/" class="dropdown-item">产品构架</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../quick-start/create-org-project/" class="dropdown-item">创建组织和项目</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/integrated-vcs/" class="dropdown-item">集成vcs</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/create-template/" class="dropdown-item">创建云模板</a>
+</li>
+                                    
+<li>
+    <a href="../../quick-start/deploy-env/" class="dropdown-item">部署环境</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品功能 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../product-features/organizations/" class="dropdown-item">组织管理</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/projects/" class="dropdown-item">项目管理</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/variables/" class="dropdown-item">变量管理</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/templates/" class="dropdown-item">云模板管理</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/envs/" class="dropdown-item">环境管理</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/compliance/" class="dropdown-item">安全合规</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/pipeline/" class="dropdown-item">Pipeline</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/drift-scan/" class="dropdown-item">漂移检测</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/resource-account/" class="dropdown-item">资源帐号</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/vcs/" class="dropdown-item">VCS管理</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/keys/" class="dropdown-item">密钥管理</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/notice/" class="dropdown-item">事件通知</a>
+</li>
+                                    
+<li>
+    <a href="../../product-features/user-role/" class="dropdown-item">用户角色</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">产品部署 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">容器化部署</a>
+</li>
+                                    
+<li>
+    <a href="../host/" class="dropdown-item">手动部署</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">常见问题 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../answer-questions/" class="dropdown-item">常见问题</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API文档 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../api-docs/" class="dropdown-item">简介</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../releases/" class="nav-link">Releases</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../product-features/user-role/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../host/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">容器部署</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#1-docker" class="nav-link">1. 安装并启动 docker</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2-docker-compose" class="nav-link">2. 安装 docker-compose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3" class="nav-link">3. 创建部署目录</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4-docker-composeyml" class="nav-link">4. 编写 docker-compose.yml 文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#5-env" class="nav-link">5. 编写 .env 文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#6-docker-compose" class="nav-link">6. 启动docker-compose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">容器部署</h1>
+<p>该文档使用容器部署了所有组件，包括 mysql 和 consul，实际生产环境请根据需要进行调整。</p>
+<h2 id="1-docker">1. 安装并启动 docker</h2>
+<pre><code class="language-bash">curl -fsSL https://get.docker.com | bash -s docker &amp;&amp; \
+systemctl enable docker &amp;&amp; \
+systemctl start docker
+</code></pre>
+<h2 id="2-docker-compose">2. 安装 docker-compose</h2>
+<pre><code class="language-bash">curl -L https://get.daocloud.io/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose &amp;&amp; \
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<h2 id="3">3. 创建部署目录</h2>
+<p>部署目录固定为 /usr/yunji/cloudiac，<strong>不可更改</strong>，更改部署目录会导致执行部署任务失败。</p>
+<pre><code class="language-bash">mkdir -p /usr/yunji/cloudiac/var/{consul,mysql} &amp;&amp; cd /usr/yunji/cloudiac/
+</code></pre>
+<h2 id="4-docker-composeyml">4. 编写 docker-compose.yml 文件</h2>
+<p>文件路径 /usr/yunji/cloudiac/docker-compose.yml，内容如下:</p>
+<pre><code class="language-yaml"># auto-replace-from: docker/docker-compose.yml
+version: &quot;3.2&quot;
+services:
+  iac-portal:
+    container_name: iac-portal
+    image: &quot;cloudiac/iac-portal:v0.8.1&quot;
+    volumes:
+      - type: bind
+        source: /usr/yunji/cloudiac/var
+        target: /usr/yunji/cloudiac/var
+      - type: bind
+        source: /usr/yunji/cloudiac/.env
+        target: /usr/yunji/cloudiac/.env
+    ports:
+      - &quot;9030:9030&quot;
+    depends_on:
+      - mysql
+      - consul
+    restart: always
+
+  ct-runner:
+    container_name: ct-runner
+    image: &quot;cloudiac/ct-runner:v0.8.1&quot;
+    volumes:
+      - type: bind
+        source: /usr/yunji/cloudiac/var
+        target: /usr/yunji/cloudiac/var
+      - type: bind
+        source: /usr/yunji/cloudiac/.env
+        target: /usr/yunji/cloudiac/.env
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    ports:
+      - &quot;19030:19030&quot;
+    depends_on:
+      - consul
+    restart: always
+
+  ct-worker:
+    image: &quot;cloudiac/ct-worker:v0.8.1&quot;
+    container_name: &quot;ct-worker-say-hi&quot;
+    # 添加该服务只是为了自动 pull 镜像，并不需要后台运行
+    command: [&quot;echo&quot;, &quot;hello world!&quot;]
+    restart: &quot;no&quot;
+
+  iac-web:
+    container_name: iac-web
+    image: &quot;cloudiac/iac-web:v0.8.0&quot;
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - iac-portal
+
+  mysql:
+    container_name: mysql
+    image: &quot;mysql:8.0&quot;
+    command: [
+        &quot;--character-set-server=utf8mb4&quot;,
+        &quot;--collation-server=utf8mb4_unicode_ci&quot;,
+        &quot;--sql_mode=STRICT_TRANS_TABLES,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION&quot;
+    ]
+    volumes:
+      - type: bind
+        source: /usr/yunji/cloudiac/var/mysql
+        target: /var/lib/mysql
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+      - MYSQL_DATABASE
+    restart: always
+
+  consul:
+    container_name: consul
+    image: &quot;consul:latest&quot;
+    volumes:
+      - type: bind
+        source: /usr/yunji/cloudiac/var/consul
+        target: /consul/data
+    ports:
+      - &quot;8500:8500&quot;
+    command: &gt;
+      consul agent -server -bootstrap-expect=1 -ui -bind=0.0.0.0
+      -client=0.0.0.0 -enable-script-checks=true -data-dir=/consul/data
+    restart: always
+</code></pre>
+<h2 id="5-env">5. 编写 .env 文件</h2>
+<p>文件路径 /usr/yunji/cloudiac/.env，内容如下(<strong>请根据注释修改配置</strong>):</p>
+<pre><code class="language-bash"># auto-replace-from: configs/dotenv.sample
+# 平台管理员账号密码(均为必填)
+# 该账号密码只在系统初始化时使用，后续修改不影响己创建的账号
+IAC_ADMIN_EMAIL=&quot;admin@example.com&quot;
+# 密码要求长度大于 8 且包含字母、数字、特殊字符
+IAC_ADMIN_PASSWORD=&quot;&quot;
+
+# 加密密钥配置(必填)
+# 敏感数据使用该密钥进行加密
+SECRET_KEY=&quot;&quot;
+
+# IaC 对外提供服务的地址(必填), 示例: http://cloudiac.example.com
+# 该地址需要带协议(http/https)，结尾不可以加 &quot;/&quot;
+PORTAL_ADDRESS=&quot;&quot;
+
+# consul 地址(必填)，示例: private.host.ip:8500
+# 需要配置为机器的内网 ip:port，不可使用 127.0.0.1
+CONSUL_ADDRESS=&quot;&quot;
+
+# mysql 配置(必填)
+MYSQL_HOST=mysql
+MYSQL_PORT=3306
+MYSQL_DATABASE=cloudiac
+MYSQL_USER=cloudiac
+MYSQL_PASSWORD=&quot;mysqlpass&quot;
+
+# portal 服务注册信息配置 (均为必填)
+# portal 服务的 IP 地址， 容器化部署时无需修改, 手动部署时配置为内网 IP
+SERVICE_IP=iac-portal
+# portal 服务注册的 id(需要保证唯一)
+SERVICE_ID=iac-portal-01
+# portal 服务注册的 tags
+SERVICE_TAGS=&quot;iac-portal;portal-01&quot;
+
+# logger 配置
+LOG_DEVEL=&quot;debug&quot;
+
+# SMTP 配置(该配置只影响邮件通知的发送，不配置不影响其他功能)
+SMTP_ADDRESS=smtp.example.com:25
+SMTP_USERNAME=user@example.com
+SMTP_PASSWORD=&quot;&quot;
+SMTP_FROM_NAME=IaC
+SMTP_FROM=support@example.com
+
+# KAFKA配置(kafka 任务结果回调使用，不配置不影响其他功能)
+KAFKA_TOPIC=&quot;IAC_TASK_REPLY&quot;
+KAFKA_GROUP_ID=&quot;&quot;
+KAFKA_PARTITION=0
+# example: KAFKA_BROKERS: [&quot;kafka.example.com:9092&quot;, &quot;...&quot;]
+KAFKA_BROKERS=[]
+KAFKA_SASL_USERNAME=&quot;&quot;
+KAFKA_SASL_PASSWORD=&quot;&quot;
+
+
+####### 以下为 runner 配置 #############
+# runner 服务注册配置(均为必填)
+# runner 服务的 IP 地址， 容器化部署时无需修改, 手动部署时配置为内网 IP
+RUNNER_SERVICE_IP=ct-runner
+# runner 服务注册的 id(需要保证唯一)
+RUNNER_SERVICE_ID=ct-runner-01
+RUNNER_SERVICE_TAGS=&quot;ct-runner;runner-01&quot;
+
+# 是否开启 offline mode，默认为 false
+RUNNER_OFFLINE_MODE=&quot;false&quot;
+</code></pre>
+<p><em>通过 .env 可以配置大部分参数，需要更详细的配置可以拷贝镜像里的 config-portal.yml 和 config-runner.yml 文件，修改后再挂载到容器中进行替换</em></p>
+<h2 id="6-docker-compose">6. 启动docker-compose</h2>
+<pre><code class="language-bash">docker-compose up -d
+
+# 前台调试启动：
+# dokcker-compose up
+</code></pre>
+<p><em>至此服务部署完成</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
